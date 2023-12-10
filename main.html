@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+
+        <title>complete responsive dentist wbsite design </title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <header class="header fixed-top" >
+            
+                <div class="navbar">
+                
+                    
+                    <a href="#home" class="logo">dental<span>Care</span></a>
+                
+                
+                  
+
+                    <nav >
+                        
+                       <a href="#home" class="b">home</a>
+                        <a href="#about" class="b">about</a>
+                        <a href="#services" class="b" >services</a>
+                        <a href="#contact" class="b" >contact</a>
+                        <a href="login.php" class="b" >admin</a>
+                        <a href="status.php" class="b" >status</a>
+
+
+                     
+                    </nav>
+                    
+                    
+                   
+                    <a href="#contact" class="link-btn">make appointment</a>
+                    
+                   
+            
+            <div id="menu_btn"  class="fa-solid fa-bars">
+                </div>
+            
+            
+            </div>
+
+        </header>
+
+<section class="home" id="home">
+    <div class="container">
+        <div class="row min-vh-100 align-items-center">
+            <div class="content">
+                <h3> LET US BRIGHTEN YOUR SMILE</h3>
+                <p>Dental Square brings you a modern, calming experience that leaves your teeth healthy and your soul rejuvenated.</p>
+                 <a href="#contact" class="link-btn"> make appuintment</a>
+            </div>
+        </div>
+</section>
+<!--about section starts-->
+
+<section class="about" id="about">
+
+
+    <div class="container">
+    
+       <div class="row align-items-center"> 
+       
+        <div class="col-md-6 image">
+          <img src="dental.jpg"  class="w-100 mb-5 mb-md-0" alt="">
+       </div>
+   
+       <div class="col-md-6 content">
+         <span>about us</span>
+         <h3>True healthcare for your family</h3>
+         <p>We strive towards perfection which is why all our cases are based on the concept of Digital Smile Design. In our work we are led by modern protocols of digital dentistry, modern technology and we continuously educate ourselves.</p>
+          <a href="#contact" class="link-btn">make appointment</a>
+      </div>
+   
+    </div>
+   
+   </section>
+   
+   <!--about section ends-->
+
+
+   <!--service section starts -->
+
+<section class ="services" id="services">
+  
+    <h1 class="heading">our services</h1>
+ 
+    <div class="box-container container">
+      
+ 
+      <div class="box">
+        <i class="fa-solid fa-tooth"></i>
+       <h3>Denture Care</h3>
+       <p>Dentures must be cared for so that bacteria and plaque do not accumulate and cause oral health problems</p>
+     </div>
+ 
+     <div class="box">
+      <i class="fa-solid fa-tooth"></i>
+            <h3>Dental Implants</h3>
+      <p>Artificial tooth roots shaped like bolts that are implanted in the patient's jaw to replace the missing tooth roots</p>
+     </div>
+ 
+   <div class="box">
+    <i class="fa-solid fa-tooth"></i>
+         <h3>General Dentistery</h3>
+     <p>The rols of the general dentist is very important to ensure safe and effective dental and oral care</p>
+   </div>
+ 
+   <div class="box">
+    <i class="fa-solid fa-tooth"></i>
+        <h3>Cosmetic Braces</h3>
+    <p>isn't just a toothbrush enough ? Of course not, even braces users really need dental floss to keep</p>
+   </div>
+ 
+   <div class="box">
+    <i class="fa-solid fa-tooth"></i>
+        <h3>Extraction</h3>
+    <p>Teeth that are severaly damaged by decay or injury and can no longer be repaired through corrective action</p>
+   </div>
+ 
+   <div class="box">
+    <i class="fa-solid fa-tooth"></i>
+        <h3>Restorative Dentistry</h3>
+    <p>The results of dental procedures that aim to restore the shape, function and appearance of teeth</p>
+   </div>
+ 
+   
+ 
+   </div>
+ </section>
+ 
+ <!--services section ends-->
+ 
+ <script>
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var number = document.getElementById('number').value;
+        var date = document.getElementById('date').value;
+
+        if (name === '' || email === '' || number === '' || date === '') {
+            alert('Please fill in all fields.');
+            return false;
+        }
+
+        // Add your additional form validation logic here
+        return true;
+
+    }
+
+    function submitForm() {
+        if (validateForm()) {
+            // Get form values
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var number = document.getElementById('number').value;
+            var date = document.getElementById('date').value;
+
+            // You can perform additional actions here, such as sending the form data to the server
+
+            // Display response label
+            alert('Appointment submitted successfully!');
+
+            // Clear form fields
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('number').value = '';
+            document.getElementById('date').value = '';
+        }
+    }
+</script>
+
+<section class="contact" id="contact">
+    <h1 class="heading">make appointment</h1>
+    <form action="contact.php" method="post" onsubmit="return validateForm() ">
+      <span> your name :</span>
+      <input type="text" name="name" placeholder="enter your name" class="box" id="name">
+      <span> your email :</span>
+      <input type="email" name="email" placeholder="enter your email" class="box" id="email">
+      <span> your number:</span>
+      <input type="number" name="number" placeholder="enter your number" class="box" id="number">
+      <span> your appointment date :</span>
+      <input type="datetime-local" name="date" class="box" id="date">
+      <input type="submit" value="submit" name="submit" class="link-btn" >
+     
+    </form>
+    <div id="responseLabel"></div>
+ 
+ </section>   
+
+
+
+
+    <script src="script.js"></script>
+    </body>
+
+
+    
+</html>
