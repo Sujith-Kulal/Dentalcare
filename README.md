@@ -1,5 +1,5 @@
 # Dentalcare
-
+![image alt](https://github.com/Sujith-Kulal/Dentalcare/blob/51d35a60a692231f95879f8721a406aac755b4c8/Screenshot%20(52).png)
 
 # Software Requirements Specification (SRS)
 
